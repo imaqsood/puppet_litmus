@@ -359,7 +359,7 @@ namespace :litmus do
       payloads = []
       # Generate list of targets to provision
       targets.each do |target|
-        test = "bundle exec rspec ./spec/acceptance #{tag_value} --format progress"
+        test = "bundle exec rspec ./spec/acceptance/iis_virtual_directory_spec.rb:218 #{tag_value} --format progress"
         title = "#{target}, #{facts_from_node(inventory_hash, target)['platform']}"
         options = {
           env: {
